@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.Header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 600px;
+    z-index: 10;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.BG, .BGF {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.BGF {
+    object-fit: contain;
+}
+
+.bubble {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+
+.bub1 {
+    top: 20%;
+    left: 5%;
+}
+
+.bub2 {
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bub3 {
+    top: 20%;
+    right: 5%;
+}
+
+
+
+
