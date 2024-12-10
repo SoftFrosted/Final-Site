@@ -1,14 +1,7 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body, html {
     height: 100%;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -17,11 +10,9 @@ body, html {
 
 .Header {
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 0; left: 50%;
     transform: translateX(-50%);
-    width: 60%;
-    max-width: 600px;
+    width: 60%; max-width: 600px;
     z-index: 10;
 }
 
@@ -29,68 +20,54 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 }
 
 .BG {
-    width: 100%;
-    height: auto;
+    width: 100%; height: auto;
     display: block;
     object-fit: cover;
+    position: relative;
 }
 
 .BGF {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+    width: 100%; object-fit: contain;
 }
-
-.bubble {
-    position: absolute;
-    width: 80px;
-    height: auto;
-    object-fit: contain;
-}
-
-.bub1 {
-    top: 20%;
-    left: 5%;
-}
-
-.bub2 {
-    top: 45%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.bub3 {
-    top: 20%;
-    right: 5%;
-}
-
 
 .image-container {
-    position: absolute;
-    top: 5000px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
+    position: absolute; top: 5%;
+    left: 50%; transform: translateX(-50%);
+    width: 40vw; max-width: 600px;
+    height: 40vw; max-height: 600px;
+    z-index: 5;
 }
 
-.top-image,
-.bottom-image {
+.top-image, .bottom-image {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
+    transition: transform 0.3s ease;
+    transform: rotate(-20deg);
+}
+
+.top-image { z-index: 2; }
+.bottom-image { z-index: 1; }
+
+.images-overlay {
+    position: absolute;
+    top: 55%; left: 50%;
+    transform: translateX(-50%);
+    width: 50%; max-width: 600px; min-width: 300px;
+    display: flex; flex-direction: column;
+    gap: 3rem; z-index: 6;
+}
+
+.image-wrapper {
+    display: flex; justify-content: center; align-items: center;
     transition: transform 0.3s ease;
 }
 
-.top-image {
-    z-index: 2;
-}
-
-.bottom-image {
-    z-index: 1;
+.overlay-image {
+    width: 100%; height: auto;
+    min-width: 150px; min-height: 150px;
+    object-fit: contain;
 }
 
